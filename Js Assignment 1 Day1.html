@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>
+    JS Assignment day 2 que 1
+</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>There are 14 console functions and each of them have a particular use.</h4>
+    <p>
+        <ul>
+            <li>The console.assert() method writes a message to the console, but only if an expression evaluates to false. <br> Syntax console.assert(expression,message);</li>
+            <li>
+                The console.clear() method clears the console and can also be used to write a message.<br> Syntax console.clear()
+            </li>
+            <li>
+                Writes to the console the number of times that particular console.count() is called. <br> Syntax console.count(label)
+            </li>
+            <li>
+                The console.error() method writes an error message to the console.<br> Syntax console.error(message)
+            </li>
+            <li>
+                The console.group() method indicates the start of a message group. <br> Syntax console.group(label)
+            </li>
+            <li>
+                The console.groupCollapsed() method indicates the start of a collapsed message group. <br> Syntax is console.gorupCollapsed();
+            </li>
+            <li>
+                The console.groupEnd() method indicates the end of a message group.<br> Syntax is console.End()
+            </li>
+            <li>
+                he console.info() method writes a message to the console.<br> Syntax is console.info(message)
+            </li>
+            <li>
+                The console.log() method writes a message to the console. This can also write objects and arrays to the console<br> Syntax is console.log(message)
+            </li>
+            <li>
+                The console.table() method writes a table in the console view.<br> Syntax is console.table(tableData,tableColumns);
+            </li>
+            <li>
+                The console.time() method starts a timer in the console view.<br> Syntax is console.time(label)
+            </li>
+            <li>
+                The console.timeEnd() method ends a timer and writes the result in console view.<br> Syntax is console.timeEnd()
+            </li>
+            <li>
+                The console.trace() method displays a trace that show how the code ended up at a certain point.<br> Syntax is console.trace(label)
+            </li>
+            <li>
+                The console.warn() method writes a warning to the console.<br> Syntax is console.warn(message)
+            </li>
+        </ul>
+    </p>
+    <script>
+        console.clear("Console is cleared");
+
+        var a = false;
+        console.assert(a, "This is assert function");
+        for (i = 0; i < 5; i++) {
+            console.count("console.count");
+        }
+        console.error("This is an error");
+        console.group();
+        console.log("This is inside a group");
+        console.groupEnd();
+        console.groupCollapsed();
+        console.log("Console is grouped");
+        console.groupEnd();
+        console.log("Group ends");
+        console.info("This is console info");
+        console.log("This is console log");
+        var car1 = {
+            name: "Audi",
+            model: "Q7"
+        }
+        var car2 = {
+            name: "Volvo",
+            model: "XC60"
+        }
+        var car3 = {
+            name: "Ford",
+            model: "Mustang"
+        }
+        console.table([car1, car2, car3], ["model"]);
+        console.time("Time");
+        console.timeEnd("Time");
+        console.trace(" Console Trace");
+        console.warn("This is warning");
+    </script>
+
+</body>
+
+</html>
