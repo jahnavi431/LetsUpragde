@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade Js Day 3 Assignment 2</title>
+</head>
+
+<body>
+    <h3 style="color: blue ;">Script Methods</h3>
+    <ol style="font-family: 'Times New Roman', Times, serif ;">
+        <li id="charat">
+            charAt - Returns the character at the specified index.
+        </li> <br>
+        <li>charCodeAt - Returns the Unicode of the character at the specified index.</li> <br>
+        <li>concat - Joins two or more strings, and returns a new joined strings.</li> <br>
+        <li>endsWith - Checks whether a string ends with specified string/characters.</li><br>
+        <li>fromCharCode - Converts Unicode values to characters.</li><br>
+        <li>includes - Checks whether a string contains the specified string/characters.</li><br>
+        <li>indexOf - Returns the position of the first found occurrence of a specified value in a string.</li><br>
+        <li>lastIndexOf - Returns the position of the last found occurrence of a specified value in a string.</li><br>
+        <li>localeCompare - Compares two strings in the current locale.</li><br>
+        <li>match - Searches a string for a match against a regular expression, and returns the matches</li><br>
+        <li>repeat - Returns a new string with a specified number of copies of an existing string.</li><br>
+        <li>replace - Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced.</li><br>
+        <li>search - Searches a string for a specified value, or regular expression, and returns the position of the match</li><br>
+        <li>slice - Extracts a part of a string and returns a new string.</li><br>
+        <li>split - Splits a string into an array of substrings.</li><br>
+        <li>startsWith - Checks whether a string begins with specified characters.</li><br>
+        <li>substr - Extracts the characters from a string, beginning at a specified start position, and through the specified number of character.</li><br>
+        <li>substring - Extracts the characters from a string, between two specified indices.</li><br>
+        <li>toLocaleLowerCase - Converts a string to lowercase letters, according to the host's locale</li><br>
+        <li>toLocaleUpperCase - Converts a string to uppercase letters, according to the host's locale.</li><br>
+        <li>toLowerCase - Converts a string to lowercase letters.</li><br>
+        <li>toString - Returns the value of a string object.</li><br>
+        <li>toUpperCase - Converts a string to uppercase letters.</li><br>
+        <li>trim - Removes whitespace from both sides of string</li><br>
+        <li>valueOf - Returns the primitive value of a String Object.</li>
+
+    </ol>
+    <h4 style="color: coral;">Array Methods</h4>
+    <ul style="font-family: 'Times New Roman', Times, serif ;">
+        <li>join - Joins all array elements into a single string.</li><br>
+        <li>toString - Converts an array to a string of array values.</li><br>
+        <li>pop - Removes the last element from an array.</li><br>
+        <li>push - Adds a new element to an array(at the end).</li><br>
+        <li>shift - Removes the first array element and "shifts" all other elements to a lower index.</li><br>
+        <li>unshift - Adds a new element to an array (at the beginning),and "unshifts" older elements.</li><br>
+        <li>splice - It can be used to add new items to an array.</li><br>
+        <li>concat - Creates a new array by merging(concatenating)existing arrays</li><br>
+        <li>slice - Creates a new array.It does not remove any elements from the source array.</li><br>
+        <li>reduce - Reduce the values of an array to a single value (going left-to-right).</li><br>
+        <li>includes - Check if an array contains the specified element</li><br>
+    </ul>
+
+    <script>
+        let str = "Hello World";
+        let str1 = " whatsup?";
+        console.log("This is the string we will be working on " + str);
+        console.log("This is charAt example")
+        console.log(str.charAt(0));
+        console.log("This ischarCodeAt example");
+        console.log(str.charCodeAt(2));
+        console.log("This is concat example");
+        console.log(str.concat(str1));
+        console.log("This is endsWith example");
+        console.log(str.endsWith('d'));
+        console.log("This is includes Example");
+        console.log(str.includes('wh'));
+        console.log("This is indexOf example");
+        console.log(str.indexOf('hell'));
+        console.log("This is lastIndexOf example");
+        console.log(str.lastIndexOf('hello', 0));
+        console.log("This is match example");
+        console.log(str.match(str1));
+        console.log("This is repeat example ");
+        console.log(str.repeat(2));
+        console.log("This is replace example ");
+        let str2 = str.replace("Hello", "Hi");
+        console.log(str2);
+        console.log("This is search example");
+        console.log(str.search("Hello"));
+        console.log("This is toUpperCase example");
+        console.log(str.toUpperCase());
+        let a = [1, 2, 3, 4, 5, 6];
+        console.log("This is array join example");
+        console.log(a.join());
+        console.log("This is array toString example");
+        console.log(a.toString());
+        console.log("This is array pop example");
+        console.log(a.pop() + " is removed from array");
+        console.log("This is array push example");
+        console.log(a.push(10));
+        console.log("This is array shift example");
+        console.log(a.shift());
+        console.log("This is array unshift example");
+        console.log(a.unshift());
+        console.log("This is array splice example");
+        console.log(a.splice(10));
+        console.log("This is array concat example");
+        let b = [7, 8, 9];
+        let c = a.concat(b);
+        console.log(c);
+        console.log("This is array reduce example");
+        console.log(a);
+    </script>
+</body>
+
+</html>
