@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade Day 5 Assignment 1</title>
+</head>
+
+<body>
+    <h4 style="position:absolute;right: 500px;left: 375px;top: 267px;">Enter a number</h4>
+    <input type="text" id="num" style="position:absolute;right: 500px;left: 550px;top: 300px;">
+    <button onclick="inp()" style="position:absolute;right: 500px;left: 725px;top: 300px;">Add</button>
+    <button onclick="done()" style="position:absolute;right: 500px;left: 775px;top:300px">Submit</button>
+    <script>
+        let num = Array();
+        let i = 0;
+
+        function inp() {
+            let a = parseInt(document.getElementById("num").value);
+            if (a > 0) {
+                num[i] = a;
+                i++;
+                alert(a + " is added");
+            } else {
+                alert("Enter only positive numbers");
+            }
+            console.log(num);
+            document.getElementById("num").value = "";
+        }
+
+        function done() {
+
+
+            let odd = num.filter(el => el % 2 != 0);
+
+            console.log(odd);
+            let oddcubes = odd.map(function(el) {
+                return el ** 3;
+
+            });
+            console.log(oddcubes);
+        }
+    </script>
+
+</body>
+
+</html>

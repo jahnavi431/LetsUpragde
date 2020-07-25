@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Assignment-2 Day 5(OOPS)</title>
+    </head>
+    <body>
+    <script>
+        class User{
+            constructor(name,age,email)
+            {
+                this.name = name;
+                this.age=age;
+                this.email=email;
+                this.courses=[]; 
+            }
+             login()
+             {
+                 console.log(`${this.name} has logged in`);
+                 return this;
+             }
+             logout()
+             {
+                 console.log(`${this.name} has logged out`);
+                 return this;
+             }
+             details()
+             {
+                 console.log(`Name is ${this.name},age ${this.age},and email is ${this.email}`);
+                 return this;
+             }
+            }
+            let user=new User('Ravi',20,'R77@gmail.com');
+            user.login().logout().details();
+            class Moderator extends User{
+                constructor(name,age,email,co)
+                {
+                    super(name,age,email);
+                    this.co=0;
+                }
+                addcoins()
+                {
+                    this.co++;
+                    console.log(`${this.name} added ${this.co} coins`);
+                    return this;
+                }
+                removecoins()
+                {
+                    this.co--;
+                    console.log(`${this.name} removed ${this.co} coins`);
+                    return this;
+                }
+            
+            }
+            let mod=new Moderator('Chary',21,'C51@gmail.com');    
+            mod.addcoins().addcoins().addcoins().addcoins().removecoins();
+            class Admin extends Moderator{
+                addcourse(user,course)
+                {
+                 user.courses.push(course);
+                 console.log(user);
+                }
+                removecourse(user,course)
+                {
+                    user.courses.pop(course);
+                    console.log(user);
+                }
+            }
+            let admin=new Admin('Nidhi',20,'S50@gmail.com');
+            admin.addcourse(user,'Python');
+            admin.addcourse(user,'JAVA');
+            admin.addcourse(mod,'JavaScript');
+            admin.addcourse(admin,'AI');
+            admin.removecourse(user,'JAVA');
+    </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade Day 5 Assignment 3</title>
+</head>
+<body>
+    <h3>Open console to see the result</h3>
+    <h4>This page prints todos from json placeholder api whose tasks are completed.</h4>
+    <script>
+(async () => {
+  const rawResponse = await fetch('https://jsonplaceholder.typicode.com/todos/', {
+    method: 'GET'
+    
+  });
+  const content = await rawResponse.json();
+
+  content.forEach(element => {
+      if(element.completed==true){
+        console.log(element);
+      }
+      
+  });
+
+})();
+  
+
+
+        </script>
+    
+</body>
+</html>
