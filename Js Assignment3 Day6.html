@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>LetsUpgrade JS Day 6 Assignment 3</title>
+</head>
+
+<body onload="startTime()">
+
+
+
+
+    <input type="button" id="dark" onclick="myFunction()" value="Dark mode">
+    <h2 id="txt" style="padding-left: 600px;"></h2>
+    <h1 id="greet" style="padding-left: 350px;padding-top: 10px;"></h1>
+    <script>
+        let a = prompt("Please Enter your name ");
+        document.getElementById("greet").innerHTML = "Welcome " + a + "\n Have a nice day!";
+
+
+        // var body = $('body');
+        // var colors = ['#ff4d4d', '#4d88ff', '#ff66ff', '#66ff99', '#ffff00', '#9933ff'];
+        // var currentIndex = 0;
+        // setInterval(function() {
+        //     body.css({
+        //         backgroundColor: colors[currentIndex]
+        //     });
+        //     if (!colors[currentIndex]) {
+        //         currentIndex = 0;
+        //     } else {
+        //         currentIndex++;
+        //     }
+        // }, 5000);
+        function myFunction() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i
+            }; // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
+    <style>
+        body {
+            transition: 5 s ease;
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+        }
+        
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+        
+        input {
+            margin-left: 1000px;
+            margin-top: 10px;
+            lighting-color: aqua;
+            border-style: groove;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade JS Day 6 Assignment 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <h1 style="padding-top: 250px;padding-left: 575px;">LetsUpgrade</h1>
+    <script>
+        var body = $('body');
+        var colors = ['#ff4d4d', '#4d88ff', '#ff66ff', '#66ff99', '#ffff00', '#9933ff'];
+        var currentIndex = 0;
+        setInterval(function() {
+            body.css({
+                backgroundColor: colors[currentIndex]
+            });
+            if (!colors[currentIndex]) {
+                currentIndex = 0;
+            } else {
+                currentIndex++;
+            }
+        }, 5000);
+    </script>
+    <style>
+        body {
+            transition: 5 s ease;
+        }
+    </style>
+</body>
+
+</html>

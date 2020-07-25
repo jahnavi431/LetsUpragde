@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Assigment-2 Day 6</title>
+    </head>
+    <body>
+        <h2 style="padding-left: 600px;">Multiplication Table</h2>
+        <form style="padding-left:600px;">
+        ENter Number=<input type="text" id="num" /><br>
+        <input type="button" onclick="Table()" value="Click" />
+        <p id="result"></p>
+        </form>
+        <script>
+            function Table()
+            {
+              n=document.getElementById("num").value;
+              for(var i = 0 ;i < 10 ; i++)
+              {
+                document.getElementById("result").innerHTML += (n + " x " + (i+1) + " = " + (n*(i+1)) + "<br>");
+              }
+            }
+        </script>
+    </body>
+</html>
