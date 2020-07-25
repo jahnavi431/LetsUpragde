@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsUpgrade JS Day 4 Assignment 2</title>
+</head>
+
+<body>
+    <h1>
+        Destructuring Objects
+    </h1>
+    <h4>Check console for results</h4>
+    <script>
+        const student = {
+            name: "Helsinki",
+            age: 24,
+            projects: {
+                diceGame: "Two players dice game using javascript"
+            }
+
+        }
+
+        console.log(student);
+        console.log("After Destructuring");
+        const {
+            name,
+            age,
+            projects
+        } = student;
+        console.log(name);
+        console.log(age);
+        console.log(projects);
+    </script>
+</body>
+
+</html>

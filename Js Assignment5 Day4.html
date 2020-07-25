@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            var a=prompt("Enter no. of sales");
+            var b=prompt("Enter price");
+            if(a<=5000)
+            {
+                var c=a*b*(2/100);
+                console.log("Commission is " +c);
+            }
+            else if(a>5001 && a<=10000)
+            {
+                var c=a*b*(5/100);
+                console.log("Commission is " +c);
+            }
+            else if(a>10001 && a<=20000)
+            {
+                var c=a*b*(7/100);
+                console.log("Commission is " +c);
+            }
+            else if(a>20000)
+            {
+                var c=a*b*(10/100);
+                console.log("Commission is " +c);
+            }
+            else
+            {
+                console.log();
+            }
+        </script>
+    </body>
+</html>

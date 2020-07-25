@@ -1,0 +1,23 @@
+<html>
+   <head>
+      <title>JS Assignment-7 Day 4</title>
+   </head>
+
+   <body>
+      <script>
+      var n=prompt("Enter num");
+      document.write("Prime No.s between the given limit are:")
+         for (var limit = 1; limit <= n; limit++) {
+            var a = false;
+            for (var i = 2; i <= limit; i++) {
+               if (limit%i===0 && i!==limit) {
+                  a = true;
+               }
+            }
+            if (a === false) {
+               document.write("<br>" +limit);
+            }
+         }
+      </script>
+   </body>
+</html>

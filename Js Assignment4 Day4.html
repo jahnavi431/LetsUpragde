@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS Assignment-4 Day 4</title>
+    </head>
+    <body>
+        <h2 style="padding-left: 650px;">CALCULATOR</h2>
+        <form style="padding-left: 550px;">
+            1st No.= <input type="text" id="frstnum" /><br>
+            2nd No./percentage= <input type="text" id="secnum" /><br>
+            <input type="button" onclick="add()" value="Add" />
+            <input type="button" onclick="sub()" value="Subtract" />
+            <input type="button" onclick="mul()" value="Multiply" />
+            <input type="button" onclick="div()" value="Divide" />
+            <input type="button" onclick="per()" value="Percentage" />
+            <input type="button" onclick="sqr()" title="Enter only 1st number" value="Square Root" />
+            <p>Result is : <br>
+                <span id="result"></span>
+            </p>
+        </form>
+        <script>
+            function add()
+            {
+                n1 = document.getElementById("frstnum").value;
+                n2 = document.getElementById("secnum").value;
+                document.getElementById("result").innerHTML = parseInt(n1) + parseInt(n2);
+            }
+            function sub()
+            {
+                n1 = document.getElementById("frstnum").value;
+                n2 = document.getElementById("secnum").value;
+                document.getElementById("result").innerHTML = n1 - n2;
+            }
+            function mul()
+            {
+                n1 = document.getElementById("frstnum").value;
+                n2 = document.getElementById("secnum").value;
+                document.getElementById("result").innerHTML = n1 * n2;
+            }
+            function div()
+            {
+                n1 = document.getElementById("frstnum").value;
+                n2 = document.getElementById("secnum").value;
+                document.getElementById("result").innerHTML = n1 / n2;
+            }
+            function per()
+            {
+                n1 = document.getElementById("frstnum").value;
+                n2 = document.getElementById("secnum").value;
+                document.getElementById("result").innerHTML = (n2/100) * n1; 
+            }
+            function sqr()
+            {
+                n1 = document.getElementById("frstnum").value;
+                document.getElementById("result").innerHTML = Math.sqrt(n1);
+            }
+        </script>
+    </body>
+</html>
