@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>STOPWATCH</title>
+    <style type="text/css">
+    body{
+        background: black;
+        color: #f6f6f6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+    }
+    .watch{
+        font-size: 10em;
+        font-family: monospace;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+    }
+    ul li{
+        list-style: none;
+        padding: 10px 0;
+    }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <button onclick="start()">START</button>
+        <button onclick="pause()">PAUSE</button>
+        <button onclick="stop()">STOP</button>
+        <button onclick="restart()">RESTART</button>
+        <button onclick="lap()">LAP</button>
+        <button onclick="reset()">RESET</button>
+</div>
+<div class="watch">00:00:00</div>
+<ul class="laps"></ul>
+<script type="text/javascript">
+var ms=0, s=0, m=0;
+var timer;
+var sw=document.querySelector('.watch');
+var laps=document.querySelector('.laps');
+function start()
+{ 
+    if(!timer){
+    timer=setInterval(run, 10);
+}
+}      
+function run()
+{
+sw.textContent= (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
+ms++;
+if(ms == 100)
+{ms = 0;
+s++;
+}
+if(s == 60)
+{
+    s = 0;
+    m++;
+} 
+}
+function pause()
+{
+    clearInterval(timer);
+    timer = false;
+}
+function stop()
+{
+    clearInterval(timer);
+    timer = false;
+    ms=0;
+    s=0;
+    m=0;
+    sw.textContent= (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
+}
+function restart()
+{
+    stop();
+    start();
+}
+function lap()
+{
+    if(timer)
+    {
+        var li = document.createElement('li');
+        li.innerText = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
+        laps.append(li);
+    }
+}
+function reset()
+{
+    laps.innerHTML='';
+}
+</script>
+</body>
