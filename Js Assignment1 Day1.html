@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Letsupgrade js-2-1</title>
+    </head>
+    <body>
+        <form>
+            Enter String=<input type="text" id="frst" /><br>
+            <br>
+            Enetr character=<input type="text" id="sec" /><br>
+            <br>
+            <input type="button" onclick="mm()" value="Click" />
+            <p>
+                Result= <span id="result"></span>
+           </p>
+       </form>
+        <script>
+            function mm()
+           {
+                a=document.getElementById("frst").value;
+                b=document.getElementById("sec").value;
+                document.getElementById("result").innerHTML= a.search(b);
+           }
+         </script>
+    </body>
+</html>
