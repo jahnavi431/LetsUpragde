@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Assignment</title>
+  </head>
+<body>
+    <p>Hello Everyone.!</p>
+    <img src="https://i.ytimg.com/vi/F-8IWOUGtaE/maxresdefault.jpg" id="image" width="700px" height="700px">
+    <input type="button" onclick="change()" value="Click2" />
+    <input type="button" onclick="change1()" value="Click3" />
+    <input type="button" onclick="change2()" value="Click1" />
+    <script>
+        function change() {
+            var pht = document.getElementById('image');
+            if (pht.src.match("https://i.ytimg.com/vi/F-8IWOUGtaE/maxresdefault.jpg")) {
+                pht.src = "https://www.debsandidge.com/wp-content/uploads/2014/02/timelapse-stack.jpg";
+            }
+        }
+        function change1() {
+            var pht = document.getElementById('image');
+            if (pht.src.match("https://www.debsandidge.com/wp-content/uploads/2014/02/timelapse-stack.jpg")) {
+                pht.src = "https://c1.wallpaperflare.com/preview/445/570/476/sun-denmark-summer-sea.jpg";
+            }
+        }
+        function change2() {
+            var pht = document.getElementById('image');
+            if (pht.src.match("https://c1.wallpaperflare.com/preview/445/570/476/sun-denmark-summer-sea.jpg")) {
+                pht.src = "https://i.ytimg.com/vi/F-8IWOUGtaE/maxresdefault.jpg";
+            }
+        }
+    </script>
+
+</body>
+</html>

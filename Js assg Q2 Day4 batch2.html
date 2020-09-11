@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS Assignment</title>
+    </head>
+    <body>
+       <label>First:</label><input type="text" name="frst" id="so" value=""/><br><br>
+       <input type="button" onclick="copy()" value="Copy"><br><br>
+       <label>second:</label><input type="text" name="second" id="de" value=""/>
+        <script>
+            function copy()
+            {
+                var a=document.getElementById('so');
+                var b=document.getElementById('de');
+                b.value=a.value;
+            }
+        </script>
+    </body>
+</html>
