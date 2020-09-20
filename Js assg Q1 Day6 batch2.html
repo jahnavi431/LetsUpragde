@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table{
+         width: 100%;
+         }
+         th,
+         td{
+             height: 30px;
+             text-align: center;
+         }
+     </style>
+     <body>
+         <div class="data"></div>
+         <h1>JAVASCRIPT</h1>
+         <div class="form">
+             <input type="text" placeholder="Search by name" id="search" onkeyup="searchByName()"/>
+             <input type="text" placeholder="Search by city" id="searchh" onkeyup="searchByCity()"/>
+         </div>
+         <br>
+         <table border="1" cellspacing="0">
+             <thead>
+                 <tr>
+                     <th>SrNo</th>
+                     <th>Name</th>
+                     <th>Age</th>
+                     <th>City</th>
+                     <th>Salary</th>
+                     <th>Actions</th>
+                 </tr>
+             </thead>
+             <tbody class="tdata" id="tdata"></tbody>
+              <!--<tr>
+                <td>1</td>
+                 <td>jahnavi</td>
+                 <td>19</td>
+                 <td>hyd</td>
+                 <td>20,000</td>
+             </tr> -->
+         </table>
+         </div>
+         <script src="n.js"></script>
+         </body>
+</html>

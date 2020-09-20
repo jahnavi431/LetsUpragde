@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
+<style>
+    table {
+        width: 100%;
+    }
+    
+    th,
+    td {
+        height: 30px;
+        text-align: center;
+    }
+    
+    input {
+        height: 30px;
+        text-indent: 20px;
+    }
+    
+    button {
+        padding: 10px;
+    }
+</style>
+
+<body>
+    
+    <div class="">
+        <form class="form-inline">
+            <fieldset>
+                <input id="name" type="text" placeholder="Name" required>
+                <input id="source" type="text" placeholder="Source" required>
+                <input id="destination" type="text" placeholder="Destination" required>
+                <input id="number" type="text" placeholder="Number" required>
+                <input id="capacity" type="text" placeholder="Bus Capacity" required>
+                <button class="btn" type="submit">Add Data</button>
+            </fieldset>
+        </form>
+    </div>
+    <br>
+
+    <div class="form">
+        <input type="text" placeholder="search by source" id="source" required>
+        <input type="text" placeholder="search by destination" id="destination" required>
+        <button type="submit">Search</button>
+    </div>
+
+    <br>
+    <div class="">
+        <table border="1" cellspacing="0" class="table controls controls-row">
+            <thead>
+                <tr>
+                    <th> S.no </th>
+                    <th> Name </th>
+                    <th> Source </th>
+                    <th> Destination </th>
+                    <th> Number </th>
+                    <th> Capacity </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    var sno = 0;
+    $("form button.btn").click(function() {
+        var name = $("#name").val();
+        var source = $("#source").val();
+        var destination = $("#destination").val();
+        var number = $("#number").val();
+        var capacity = $("#capacity").val();
+        var new_row = "<tr><td>" + ++sno + "</td><td>" + name + "</td><td>" + source + "</td><td>" + destination + "</td><td>" + number + "</td><td>" + capacity + "</td></tr>";
+        $("table tbody").append(new_row);
+        return false;
+    });
+</script>
+
+</html>
